@@ -1,21 +1,34 @@
 ## Linux Configuration for hosting Catalog application
 
-#### * Access the server by the reviewers:
+* ####  Access the server by the reviewers:
+You can access the server which hosted on Azure.com using SSH :<br/>
+**User:** grader<br/>
+**Host Address:** udacity.francecentral.cloudapp.azure.com<br/>
+**Port:** 22/tcp
+
+_Notice that accessing SSH require a private key which will be provided on submit_
+
+So you can use this command:
+
+**_ssh grader@udacity.francecentral.cloudapp.azure.com -p 22 -i /path/to/privateKey_**
 
 
+* ####  The hosted web application URL:
 
-#### * The hosted web application URL:
 https://udacity.francecentral.cloudapp.azure.com
 
-#### * Summary of software installation and configuration:
-After upgrade (sudo apt update && apt upgrade), install the following software:
+* ####  Summary of software installation and configuration:
+After upgrade (**_sudo apt update && apt upgrade_**), <br/>install the following software:
 
 ###### apt install postgresql apache2 python3-flask libapache2-mod-wsgi-py3 python3-sqlalchemy python3-oauth2client
 
-Edit this file : vim /etc/apache2/sites-enabled/000-default.conf
+Edit this file : 
+**_vim /etc/apache2/sites-enabled/000-default.conf_**
+<br/>Add the following:
 
-'''
-<VirtualHost *:443>
+
+        
+        <VirtualHost *:443>
         ServerName udacity.francecentral.cloudapp.azure.com
           <Directory /var/www/udacity>
                  WSGIProcessGroup catalog
@@ -40,11 +53,10 @@ Edit this file : vim /etc/apache2/sites-enabled/000-default.conf
         SSLCertificateFile /etc/letsencrypt/live/udacity.francecentral.cloudapp.azure.com/fullchain.pem
         SSLCertificateKeyFile /etc/letsencrypt/live/udacity.francecentral.cloudapp.azure.com/privkey.pem
         Include /etc/letsencrypt/options-ssl-apache.conf
-        
-</VirtualHost>
-'''
+        </VirtualHost>
 
-#### * Third-party resources:
+
+* ####  Third-party resources:
 I used Let's Encrypt to get public signed certificate,
 with help of this tutorial https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-18-04
 
