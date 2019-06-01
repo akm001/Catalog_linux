@@ -20,7 +20,7 @@ https://udacity.francecentral.cloudapp.azure.com
 * ####  Summary of software installation and configuration:
 After upgrade (**_sudo apt update && apt upgrade_**), <br/>install the following software:
 
-###### apt install postgresql apache2 python3-flask libapache2-mod-wsgi-py3 python3-sqlalchemy python3-oauth2client
+###### apt install postgresql apache2 python3-flask libapache2-mod-wsgi-py3 python3-sqlalchemy python3-oauth2client python3-psycopg2
 
 Edit this file : 
 **_vim /etc/apache2/sites-enabled/000-default.conf_**
