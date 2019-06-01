@@ -1,10 +1,10 @@
 ## Linux Configuration for hosting Catalog application
 
 * ####  Access the server by the reviewers:
-You can access the server which hosted on Azure.com using SSH :
-**User:** grader
-**Host Address:** udacity.francecentral.cloudapp.azure.com
-**Port:** 22/tcp
+You can access the server which hosted on Azure.com using SSH :<br/>
+**User:** grader<br/>
+**Host Address:** udacity.francecentral.cloudapp.azure.com<br/>
+**Port:** 22/tcp<br/>
 
 _Notice that accessing SSH require a private key which will be provided on submit_
 
@@ -18,13 +18,13 @@ So you can use this command:
 https://udacity.francecentral.cloudapp.azure.com
 
 * ####  Summary of software installation and configuration:
-After upgrade (**_sudo apt update && apt upgrade_**), install the following software:
+After upgrade (**_sudo apt update && apt upgrade_**), <br/>install the following software:
 
 ###### apt install postgresql apache2 python3-flask libapache2-mod-wsgi-py3 python3-sqlalchemy python3-oauth2client
 
 Edit this file : 
 **_vim /etc/apache2/sites-enabled/000-default.conf_**
-Add the following:
+<br/>Add the following:
 
 
         
