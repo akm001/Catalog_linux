@@ -6,11 +6,11 @@ You can access the server which hosted on Azure.com using SSH :<br/>
 **Host Address:** udacity.francecentral.cloudapp.azure.com<br/>
 **Port:** 22/tcp<br/>
 
-_Notice that accessing SSH require a private key which will be provided on submit_
+_Notice that accessing SSH require a private key which will be provided on submit, [Key passphrase is **akm**] _
 
 So you can use this command:
 
-**_ssh grader@udacity.francecentral.cloudapp.azure.com -p 22 -i /path/to/privateKey_**
+**_ssh grader@udacity.francecentral.cloudapp.azure.com -p 2200 -i /path/to/privateKey_**
 
 
 * ####  The hosted web application URL:
