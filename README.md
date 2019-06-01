@@ -10,10 +10,11 @@ https://udacity.francecentral.cloudapp.azure.com
 #### * Summary of software installation and configuration:
 After upgrade (sudo apt update && apt upgrade), install the following software:
 
-apt install postgresql apache2 python3-flask libapache2-mod-wsgi-py3 python3-sqlalchemy python3-oauth2client
+###### apt install postgresql apache2 python3-flask libapache2-mod-wsgi-py3 python3-sqlalchemy python3-oauth2client
 
-vim /etc/apache2/sites-enabled/000-default.conf
+Edit this file : vim /etc/apache2/sites-enabled/000-default.conf
 
+'''
 <VirtualHost *:443>
         ServerName udacity.francecentral.cloudapp.azure.com
           <Directory /var/www/udacity>
@@ -39,8 +40,9 @@ vim /etc/apache2/sites-enabled/000-default.conf
         SSLCertificateFile /etc/letsencrypt/live/udacity.francecentral.cloudapp.azure.com/fullchain.pem
         SSLCertificateKeyFile /etc/letsencrypt/live/udacity.francecentral.cloudapp.azure.com/privkey.pem
         Include /etc/letsencrypt/options-ssl-apache.conf
+        
 </VirtualHost>
-
+'''
 
 #### * Third-party resources:
 I used Let's Encrypt to get public signed certificate,
